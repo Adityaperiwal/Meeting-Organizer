@@ -1,0 +1,51 @@
+.center-heading{
+    padding: 20px;
+    width:30rem;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.add-meeting-section {
+    width:30rem;
+    gap:2rem;
+    border: 1px solid black;
+    padding: 20px 20px;
+}
+
+.back-btn {
+    background-color: rgb(64, 64, 218);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.long-input {
+    width: 20rem;
+}
+
+.time-input {
+    width: 8rem;
+}
+
+.gap-small {
+    gap: 5rem;
+}
+
+.gap-xs {
+    gap:2.6rem;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.time-label {
+    width: 4.68rem;
+}
+
+.building-label {
+    width: 7rem;
+}

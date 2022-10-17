@@ -1,0 +1,51 @@
+.section-heading {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.room-name{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.room-card {
+    width: 30rem;
+    height: 6rem;
+    padding: 0px 10px;
+    border: 1px solid black;
+}
+
+.select-room-section {
+    border: 1px solid black;
+}
+
+.room-options-section {
+    height: 25rem;
+    overflow: auto;
+}
+
+.selected {
+    background-color: rgb(64, 64, 218);
+    color: white;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.back-btn {
+    background-color: rgb(64, 64, 218);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.sorry-msg {
+    width: 27rem;
+    text-align: center;
+    font-style: italic;
+}
