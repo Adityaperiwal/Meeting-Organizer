@@ -18,14 +18,12 @@ function MeetingsInfo() {
     })
 
     useEffect(() => {
-        console.log(buildingsInfo);
         if (buildingsInfo?.Buildings) {
             setBuildings(buildingsInfo.Buildings);
         }
     }, [buildingsInfo]);
 
     useEffect(() => {
-        console.log(meetingRoomsInfo);
         if (meetingRoomsInfo?.MeetingRooms) {
             setMeetingRooms(meetingRoomsInfo.MeetingRooms);
             initializeStats(meetingRoomsInfo.MeetingRooms);
@@ -47,7 +45,6 @@ function MeetingsInfo() {
                 convertToDate(meet.date, meet.endTime);
                 const meetingStartDate = convertToDate(meet.date, meet.startTime);
                 const meetingEndDate = convertToDate(meet.date, meet.endTime);
-                console.log(meetingStartDate, meetingEndDate);
                 if (meetingStartDate.getTime() < currentDate.getTime() && meetingEndDate.getTime() > currentDate.getTime()) {
                   isOccupiedNow = true;
                   meetingsGoingOn++;  
@@ -65,7 +62,6 @@ function MeetingsInfo() {
             meetingsToday,
             meetingsGoingOn
         });
-        console.log(freeRoomsNowCount);
     }
 
     return (<>

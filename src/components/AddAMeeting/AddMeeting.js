@@ -16,7 +16,6 @@ function AddMeeting({ buildings, meetingRooms, goToMeetingInfo }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(meetingInfo);
         setMeetingRoomSelection(true);
     }
 
@@ -44,7 +43,7 @@ function AddMeeting({ buildings, meetingRooms, goToMeetingInfo }) {
                 </div>
                 <div className="flex-row gap-xs input-section">
                     <div className="building-label">Select Building</div>
-                    <select onChange={(e) => {setMeetingInfo({ ...meetingInfo, building: buildings[e.target.value] });console.log('change', e.target.value)}}>
+                    <select onChange={(e) => {setMeetingInfo({ ...meetingInfo, building: buildings[e.target.value] });}}>
                         {buildings.map((building, index) => <option value={index}>{building.name}</option>)}
                     </select>
                 </div>
