@@ -26,23 +26,15 @@ function MeetingRoomSelection({ meetingInfo, buildings, meetingRooms, onBack, go
         const selectedDate = formatDateInput(meetingInfo.date);
         const selectedStart = convertToDate(selectedDate, meetingInfo.startTime);
         const selectedEnd = convertToDate(selectedDate, meetingInfo.endTime);
-        console.log(scheduledStart, scheduledEnd);
-        console.log(selectedStart, selectedEnd);
-        console.log(isOverLappingTime(scheduledStart, scheduledEnd, selectedStart, selectedEnd));
         return isOverLappingTime(scheduledStart, scheduledEnd, selectedStart, selectedEnd);
     }
 
     const initializeRooms = () => {
-        console.log(meetingInfo)
         const { building: selectedBuilding } = meetingInfo;
-        console.log('init')
         const availableMeetingRooms = selectedBuilding.meetingRooms.filter(meetingRoom => {
-            console.log(meetingRoom)
             const hasConflictingMeeting = meetingRoom.meetings.some(scheduledMeeting => hasConflicts(scheduledMeeting));
-            console.log(hasConflictingMeeting)
             return !hasConflictingMeeting;
         });
-        console.log(availableMeetingRooms);
         setAvailableRooms(availableMeetingRooms);
     }
 
